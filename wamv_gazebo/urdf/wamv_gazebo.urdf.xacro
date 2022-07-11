@@ -69,6 +69,7 @@
     </xacro:if>
   </xacro:unless>
 
+  
   <!-- === Decide if we lock the robot to the world === -->
   <xacro:if value="$(arg locked)">
     <gazebo>
@@ -152,13 +153,16 @@
       <xacro:include filename="$(find wamv_description)/urdf/cpu_cases.xacro" />
       <xacro:cpu_cases position="-0.15 0 1.53" orientation="0 0 0"/>
     
-      <!-- Add a stereo camera pair -->
-      <xacro:wamv_camera name="front_left_camera" y="0.1" x="0.75" P="${radians(15)}" />
-      <xacro:wamv_camera name="front_right_camera" y="-0.1" x="0.75" P="${radians(15)}" />
+      <!-- Add a front camera -->
+      <xacro:wamv_camera name="front_camera" y="0.0" x="0.75" P="${radians(15)}" />
     
-      <!-- Add a camera facing right -->
-      <xacro:wamv_camera name="middle_right_camera" y="-0.45" P="${radians(15)}" Y="${radians(-90)}" post_Y="${radians(-90)}" />
-    
+      <!-- Add side cameras -->
+      <xacro:wamv_camera name="right_camera" y="-0.45" P="${radians(15)}" Y="${radians(-90)}" post_Y="${radians(-90)}" />
+      <xacro:wamv_camera name="left_camera" y="0.45" P="${radians(15)}" Y="${radians(90)}" post_Y="${radians(90)}" />
+      
+      <!-- Add a rear camera -->
+      <xacro:wamv_camera name="rear_camera" y="0.0" x="-0.95" P="${radians(15)}" Y="${radians(-180)}" post_Y="${radians(-180)}"/>
+         
       <!-- Add simulated GPS -->
       <xacro:wamv_gps name="gps_wamv" x="-0.85" />
     

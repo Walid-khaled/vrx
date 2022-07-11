@@ -30,6 +30,18 @@ link_directories(
   ${catkin_LIBRARY_DIRS}
 )
 
+
+# For motion_plugin plugin
+add_library(motion_planning_plugin_x src/motion_planning_plugin_x.cc)
+target_link_libraries(motion_planning_plugin_x ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
+
+add_library(motion_planning_plugin_y src/motion_planning_plugin_y.cc)
+target_link_libraries(motion_planning_plugin_y ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
+
+add_library(motion_planning_plugin_rot src/motion_planning_plugin_rot.cc)
+target_link_libraries(motion_planning_plugin_rot ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
+
+
 ## Declare a C++ library
 add_library(buoyancy_gazebo_plugin
   src/buoyancy_gazebo_plugin.cc

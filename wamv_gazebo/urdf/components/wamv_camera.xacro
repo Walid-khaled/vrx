@@ -116,7 +116,7 @@
 
     <!-- Sensor post to sensor post arm joint -->
     <joint name="${namespace}/${name}_post_to_${name}_post_arm_joint" type="fixed">
-      <origin xyz="${post_to_post_arm_x} 0 ${z-post_z-post_arm_to_camera_z}" rpy="0 0 0" />
+      <origin xyz="${post_to_post_arm_x} 0 ${z-post_z-post_arm_to_camera_z}" rpy="0 ${-pi/12} 0" />
       <parent link="${namespace}/${name}_post_link" />
       <child link="${namespace}/${name}_post_arm_link" />
     </joint>
@@ -145,10 +145,11 @@
 	  <visualize>true</visualize>
 	</xacro:if>
         <camera name="${name}_camera">
-          <horizontal_fov>1.3962634</horizontal_fov>
+          <!--horizontal_fov>1.3962634</horizontal_fov-->
+          <hfov>45</hfov>
           <image>
-            <width>1280</width>
-            <height>720</height>
+            <width>960</width>
+            <height>600</height>
             <format>R8G8B8</format>
           </image>
           <clip>
@@ -172,10 +173,10 @@
           <cameraInfoTopicName>camera_info</cameraInfoTopicName>
           <frameName>${namespace}/${name}_link_optical</frameName>
           <hackBaseline>0.07</hackBaseline>
-          <distortionK1>0.0</distortionK1>
-          <distortionK2>0.0</distortionK2>
-          <distortionK3>0.0</distortionK3>
-          <distortionT1>0.0</distortionT1>
+          <distortionK1>-0.015435</distortionK1>
+          <distortionK2>0.123584</distortionK2>
+          <distortionK3>-0.003953</distortionK3>
+          <distortionT1>0.005400</distortionT1>
           <distortionT2>0.0</distortionT2>
         </plugin>
       </sensor>

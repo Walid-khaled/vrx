@@ -63,6 +63,86 @@
       <uri>model://obstacle_course</uri>
       <pose>-420 295 0 0 0 -2.04</pose>
     </include>
+    
+    <include>
+      <uri>model://tower</uri>
+      <pose>-450 370 -156 1.5708 0 0</pose>
+    </include>
 
+   <include>
+      <uri>model://passenger_fleet</uri>
+      <pose>-850 500 0 0 0 -3.5</pose>
+   </include>
+   
+   <include>
+      <uri>model://baltica</uri>
+      <pose>-700 500 0 0 0 0</pose>
+   </include>
+  
+   <include>
+      <uri>model://jet_ski</uri>
+      <pose>-500 220 0 0 0 0</pose>
+   </include>  
+     
+   <include>
+      <uri>model://sailing_boat</uri>
+      <pose>-650 300 0 0 0 1.5708</pose>
+   </include>   
+       
+   <include>
+      <uri>model://maintenance_fleet</uri>
+      <pose>-650 -20 0 0 0 1.5708</pose>
+   </include>   
+   
+   <include>
+      <uri>model://bullet</uri>
+      <pose>-550 200 0 0 0 3.14</pose>
+   </include> 
+   
+   <include>
+      <uri>model://yacht_v1</uri>
+      <pose>-450 -15 0 0 0 0</pose>
+   </include>   
+   
+   <include>
+      <uri>model://yacht_v2</uri>
+      <pose>-300 -30 0 0 0 3.14</pose>
+   </include>  
+   
+   <include>
+      <uri>model://yacht_v3</uri>
+      <pose>-200 -5 0 0 0 3.14</pose>
+   </include>  
+    
+   <include>
+      <uri>model://navigation_buoys0</uri>
+      <pose>-700 400 0 0 0 0</pose>
+    </include>
+    
+   <include>
+      <uri>model://navigation_buoys1</uri>
+      <pose>-700 420 0 0 0 0</pose>
+   </include>
+   
+   <include>
+      <uri>model://broken_bridge</uri>
+      <pose>-760 320 0 0 0 0</pose>
+   </include>  
+   
+   <include>
+      <uri>model://person_standing</uri>
+      <pose>-522 172 0 0 0 3.14</pose>
+   </include>
+   
+   <include>
+      <uri>model://person_walking</uri>
+      <pose>-512 172 0 0 0 -1.5708</pose>
+   </include>
+  
+   <include>
+      <uri>model://aruco_visual_marker_0</uri>
+      <pose>-532 172 0.1 0 0 0</pose>
+   </include>
+  
   </world>
 </sdf>

@@ -66,7 +66,7 @@
         args="-x $(arg x) -y $(arg y) -z $(arg z)
               -R $(arg R) -P $(arg P) -Y $(arg Y)
               -urdf -param $(arg namespace)/robot_description -model wamv"/>
-
+  
   <!-- Pinger visualization -->
   <node name="pinger_visualization" pkg="vrx_gazebo" type="pinger_visualization.py" />
 

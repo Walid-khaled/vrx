@@ -94,6 +94,7 @@
     </collision>
   </xacro:macro>
 
+  
   <link name="${namespace}/base_link">
   </link>
 
